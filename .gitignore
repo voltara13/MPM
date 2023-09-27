@@ -1,2 +1,11 @@
 .calva/output-window/output.calva-repl
 .nrepl-port
+.clj-kondo/.cache/v1/clj/clojure_1_1_test.transit.json
+.clj-kondo/.cache/v1/clj/clojure_1_1.transit.json
+.clj-kondo/.cache/v1/clj/clojure_1_2_test.transit.json
+.clj-kondo/.cache/v1/clj/clojure_1_2.transit.json
+.clj-kondo/.cache/v1/clj/lab1_2.transit.json
+.clj-kondo/.cache/v1/lock
+.clj-kondo/.cache/v1/clj/lab1.2.transit.json
+.clj-kondo/.cache/v1/clj/user.transit.json
+.lsp/.cache/db.transit.json

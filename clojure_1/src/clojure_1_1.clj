@@ -11,7 +11,7 @@
               (letfn [(get-str-variant [letters]
                         (when (not-empty letters)
                           (let [letter (first letters)]
-                            (if (or (= (count current-string) 0)
+                            (if (or (empty current-string)
                                     (not= (last current-string) letter))
                               (concat
                                (add-to-result (str current-string letter))
