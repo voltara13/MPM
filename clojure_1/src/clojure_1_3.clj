@@ -14,13 +14,3 @@
               acc))
           []
           coll))
-
-(defn square [x] (* x x))
-
-(def numbers (range 1 6))
-
-(def squared-numbers (my-map square numbers))
-(def even-numbers (my-filter even? numbers))
-
-squared-numbers
-even-numbers
