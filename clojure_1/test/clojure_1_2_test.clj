@@ -3,19 +3,19 @@
             [clojure_1_2 :as src]))
 
 (deftest test-get-all-str
-  (is (= ["abab" "abac" "abca" "abcb" "acab" "acac" "acba" "acbc"
-          "baba" "babc" "baca" "bacb" "bcab" "bcac" "bcba" "bcbc"
-          "caba" "cabc" "caca" "cacb" "cbab" "cbac" "cbca" "cbcb"] (src/get-all-str 4 ["a" "b" "c"])))
-  (is (= ["aba" "abc" "aca" "acb"
-          "bab" "bac" "bca" "bcb"
-          "cab" "cac" "cba" "cbc"]                                 (src/get-all-str 3 ["a" "b" "c"])))
-  (is (= ["ab" "ac"
-          "ba" "bc"
-          "ca" "cb"]                                               (src/get-all-str 2 ["a" "b" "c"])))
-  (is (= ["abab" "baba"]                                           (src/get-all-str 4 ["a" "b"])))
-  (is (= ["aba" "bab"]                                             (src/get-all-str 3 ["a" "b"])))
-  (is (= ["ab" "ba"]                                               (src/get-all-str 2 ["a" "b"])))
-  (is (= ["a" "b"]                                                 (src/get-all-str 1 ["a" "b"])))
+  (is (= ["cbcb" "cbca" "cbac" "cbab" "cacb" "caca" "cabc" "caba" 
+          "bcbc" "bcba" "bcac" "bcab" "bacb" "baca" "babc" "baba" 
+          "acbc" "acba" "acac" "acab" "abcb" "abca" "abac" "abab"] (src/get-all-str 4 ["a" "b" "c"])))
+  (is (= ["cbc" "cba" "cac" "cab" 
+          "bcb" "bca" "bac" "bab" 
+          "acb" "aca" "abc" "aba"]                                 (src/get-all-str 3 ["a" "b" "c"])))
+  (is (= ["cb" "ca"
+          "bc" "ba"
+          "ac" "ab"]                                               (src/get-all-str 2 ["a" "b" "c"])))
+  (is (= ["baba" "abab"]                                           (src/get-all-str 4 ["a" "b"])))
+  (is (= ["bab" "aba"]                                             (src/get-all-str 3 ["a" "b"])))
+  (is (= ["ba" "ab"]                                               (src/get-all-str 2 ["a" "b"])))
+  (is (= ["b" "a"]                                                 (src/get-all-str 1 ["a" "b"])))
   (is (= ["a"]                                                     (src/get-all-str 1 ["a"])))
   (is (= []                                                        (src/get-all-str 2 ["a"])))
   (is (= []                                                        (src/get-all-str 2 ["a" "a"])))

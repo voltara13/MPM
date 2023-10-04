@@ -12,8 +12,8 @@
       (if current-string
         (if (= n (count current-string))
           (recur stack (conj result current-string))
-          (recur (concat stack
-                         (map (partial str current-string)
-                              (remove #(= % (last current-string)) alphabet)))
+          (recur (into stack
+                       (map (partial str current-string))
+                       (filter #(not= % (last current-string)) alphabet))
                  result))
         result))))
