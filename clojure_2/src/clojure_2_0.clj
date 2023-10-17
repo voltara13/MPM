@@ -8,4 +8,5 @@
              (+
               (f 0)
               (f x)
-              (* 2 (reduce + (map f (range step (- x step) step))))))))
+              (* 2 (reduce + (map f 
+                                  (range step (- x step) step))))))))
