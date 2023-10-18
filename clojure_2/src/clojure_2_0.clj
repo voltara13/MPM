@@ -1,6 +1,6 @@
 (ns clojure_2_0)
 
-(def step 0.00001)
+(def step 0.001)
 
 (defn calc-integral
   [f]

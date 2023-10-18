@@ -1,6 +1,6 @@
 (ns clojure_2_2)
 
-(def step 0.00001)
+(def step 0.001)
 
 (defn calc-integral
   [f]
@@ -8,6 +8,8 @@
              (+
               (f 0)
               (f x)
-              (* 2 (apply + (map f 
-                                 (take (int (/ x step)) 
-                                       (iterate #(+ % step) step)))))))))
+              (* 2 (nth (map first (iterate
+                                    (fn [[prev-value x]]
+                                      [(+ prev-value (f x)) (+ step x)])
+                                    [(f step) (+ step step)])) 
+                        (- (int (/ x step)) 2)))))))
