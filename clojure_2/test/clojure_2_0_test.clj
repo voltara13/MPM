@@ -23,8 +23,8 @@
 
 (defn -main []
   (run-tests 'clojure_2_0_test)
-  (time ((src/calc-integral polinom) 100))
-  (time ((src/calc-integral polinom) 100))
-  (time ((src/calc-integral polinom) 90)))
+  (time ((src/calc-integral polinom) 1000))
+  (time ((src/calc-integral polinom) 1000))
+  (time ((src/calc-integral polinom) 900)))
 
 (-main)
