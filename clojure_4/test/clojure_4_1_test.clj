@@ -55,7 +55,9 @@
 ; Test cases for dnf function
 (deftest dnf-test
   (is (= (variable :x) (dnf (variable :x))))
-  (is (= (logic-and (variable :x) (variable :y)) (dnf (logic-and (variable :x) (variable :y))))))
+  (is (= (logic-and (variable :x) (variable :y)) (dnf (logic-and (variable :x) (variable :y)))))
+  (is (= (logic-or (logic-and (variable :x) (variable :y)) (logic-and (variable :x) (variable :z))) 
+         (dnf (logic-and (variable :x) (logic-or (variable :y) (logic-not (logic-not (variable :z)))))))))
 
 ; Run all tests
 (run-tests)
